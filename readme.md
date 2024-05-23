@@ -1,6 +1,6 @@
 ## Chronic Kidney Disease (CKD) Prediction API
 
-This API empowers healthcare professionals and researchers with the ability to predict Chronic Kidney Disease (CKD) stages and classes by leveraging machine learning models. It analyzes provided patient data to estimate the class (severity) and stage (progression) of CKD.
+This API empowers healthcare professionals and researchers with the ability to predict Chronic Kidney Disease (CKD) stages and classes by leveraging machine learning models. It analyzes provided patient data to estimate the class (severity) and stage (progression) of CKD
 
 **All requests and responses are formatted in JSON.**
 
