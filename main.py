@@ -7,7 +7,7 @@ import numpy as np
 import joblib
 import torch.nn.functional as F
 
-
+#device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
