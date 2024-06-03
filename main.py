@@ -113,7 +113,7 @@ def normalize_input(data, scaler, model_type:str):
 
         # Define which features should be normalized and which should not
         features_to_normalize_list = [
-            "specific_gravity", "albium", "blood_urea",
+            "specific_gravity", "albium", "blood_urea", "red_blood_cell",
             "serum_creatinine", "sodium", "potassium", "hemoglobin", 
             "white_blood_cell_count", "red_blood_cell_count"
         ]
@@ -151,6 +151,12 @@ def predict_cdk_stages(args):
     stage_cdk = int(torch.argmax(F.softmax(model_stage_cdk(features), dim=1)))
     print("stage: ", stage_cdk)
     return stage_cdk
+
+
+@app.get("/")
+def home():
+    return {"PROJECT":"CHRONIC DISEASE DETECTION AND PROGRESSION"}
+
 
 @app.post("/detect_cdk")
 def detect_cdk(arg: DETECT_CDK):
